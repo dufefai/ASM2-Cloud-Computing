@@ -20,22 +20,6 @@ router.post('/search', async(req, res)=>{
   res.render('index', {figures : figure, woods : wood, legos : lego});
 });
 
-router.get('/sort/price/asc', async(req,res)=>{
-  var figure = await FigureModel.find();
-  var lego = await LegoModel.find();
-  var wood = await WoodModel.find();
-  var allData = figure.concat(lego, wood);
-  allData.sort((a, b) => a.price - b.price);
-  res.render('index', { figures: allData });
-});
 
-router.get('/sort/price/desc', async(req,res)=>{
-  var figure = await FigureModel.find();
-  var lego = await LegoModel.find();
-  var wood = await WoodModel.find();
-  var allData = figure.concat(lego, wood);
-  allData.sort((a, b) => b.price - a.price);
-  res.render('index', { figures: allData });
-});
 
 module.exports = router;
