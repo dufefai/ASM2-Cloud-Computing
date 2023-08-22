@@ -1,0 +1,69 @@
+<body style="background-color: #333;">
+    <div class="container">
+        <div class="sidebar">
+            <img src="https://i.kym-cdn.com/photos/images/newsfeed/001/582/322/94d.png" height="150" width="100"
+                style="margin-left: 30px;">
+            <p style="font-family:cursive; color:aqua; margin-left: 30px;">ATN Store
+            <p>
+                <a href="/">Home Page</a>
+                <a href="/manager">Manage Page</a>
+                <a href="#">Services</a>
+                <a href="#">Contact</a>
+        </div>
+        <div class="content-container">
+            <div class="introduce">
+                <div class="intro-text" style="font-family:cursive">
+                    <h1>
+                        Welcome to Toy shop
+                    </h1>
+                    <p>If you are an admin you can manage the shop in there.<br>Please feel free to contact me when you
+                        get an
+                        error.</p>
+                </div>
+                <img src="https://i.pinimg.com/originals/a5/e1/93/a5e19359f7a639bd4058e94015c9b1ab.png" alt=""
+                    style="height: 150px; width: 200px;">
+            </div>
+            <div class="category">
+                <form action="/lego/edit/{{legos._id}}" method="post">
+                    <div class="form-group mt-3">
+                        <label class="h5 text" for="">Name</label>
+                        <input class="form-control" type="text" name="name" value={{ legos.name }} required>
+                    </div>
+                    <div class="form-group mt-3">
+                        <label class="h5 text" for="">Brand</label>
+                        <input class="form-control" type="text" name="brand" value={{ legos.brand }} required>
+                    </div>
+                    <div class="form-group mt-3">
+                        <label class="h5 text" for="">Image</label>
+                        <img src="{{legos.image}}" width="100" height="100">
+                        <input class="form-control" type="text" name="image" required>
+                    </div>
+                    <div class="form-group mt-3">
+                        <label class="h5 text" for="">Price</label>
+                        <input class="form-control" type="text" name="price" value={{ legos.price }} required>
+                    </div>
+                    <div class="form-group mt-3">
+                        <label class="h5 text" for="">Quantity</label>
+                        <input class="form-control" type="number" name="quantity" min="1" value={{ legos.quantity }} required>
+                    </div>
+                    <div class="form-group mt-3">
+                        <label class="h5 text" for="">Description</label>
+                        <input class="form-control" type="text" name="description" value={{ legos.description }} required>
+                    </div>
+                    <div class="form-group mt-3" style="text-align: right;">
+                        <input class="btn btn-success mt-3" type="submit" value="Edit">
+                    </div>
+            </div>
+        </div>
+        </form>
+    </div>
+
+    </div>
+    </div>
+    <div class="footer">
+        <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+    </div>
+</body>
