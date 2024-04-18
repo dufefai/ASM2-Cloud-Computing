@@ -19,6 +19,7 @@ var uri = "mongodb+srv://dunvgch210976:ulE6ruErSsPytb6m@cluster0.g5bxdff.mongodb
 mongoose.connect(uri)
 .then(()=> console.log("connected"))
 .catch((err) => console.log(err));
+mongoose.set('strictQuery', true);
 
 var bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({extended : false}));
